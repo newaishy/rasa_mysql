@@ -1,3 +1,8 @@
+Connect Rasa to and fetch data from MySql database
+
+Python 3.8.18
+Rasa 3.6.17
+
 Define MySQL Connection Details
 
     Create a separate Python file (e.g., database_utils.py) to store database connection information

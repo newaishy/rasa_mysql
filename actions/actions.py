@@ -31,4 +31,13 @@ def action_query_database(
 
         return [SlotSet(database_slot, formatted_results)]
     else:
-        return []  # Handle errors or provide appropriate feedback
+        return ["Error : Unable to fetch data."]  # Handle errors or provide appropriate feedback
+
+def action_fetch_data(Action):
+    def name(self):
+        return "action_fetch_data"
+    
+    def run(self, dispatcher, tracker, domain):
+        message = action_query_database(tracker.get_slot("user_phone"))
+        dispatcher.utter_message(message) # or dispatcher.utter_message(text = message)
+        return []
